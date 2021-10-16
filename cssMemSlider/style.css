@@ -28,14 +28,16 @@ main {
 .wrapper {
     margin: 20px 0;
     height: 30vw;
+    /* width: 100%; */
     overflow: hidden;
     border-radius: 3%;
 }
 
 .slider {
-    width: 100vw;
-    margin-top: -30vw;
-    border: 1px solid yellow;
+    width: 100%;
+    /* margin-top: -30vw; */
+    /* margin-top: -30vw; */
+    /* border: 1px solid yellow; */
     transition: all 0.3s ease-out;
 }
 
@@ -44,7 +46,6 @@ main {
     margin: 0;
     padding: 0;
     height: 30vw;
-    
 }
 
 .wrap-desc {
@@ -70,9 +71,9 @@ main {
 .wrap-input {
     display: inline-block;
     /* position: relative; */
-    padding-left: 10px;
+    /* padding-left: 5px; */
     /* height: 2rem; */
-    /* width: 2rem; */
+    width: 1.5rem;
     height: 2rem;
     /* margin-bottom: 12px; */
     cursor: pointer;
@@ -87,10 +88,10 @@ main {
   }
 
 input {
-    opacity: 0.3;
+    opacity: 0;
     cursor: pointer;
-    /* height: 0; */
-    /* width: 0; */
+    height: 0;
+    width: 0;
 }
 
 .checkmark {
@@ -99,8 +100,8 @@ input {
     /* position: relative; */
     /* top: 0; */
     /* left: 0; */
-    height: 16px;
-    width: 16px;
+    height: 1rem;
+    width: 1rem;
     background-color: #009acd;
     border-radius: 50%;
     transition: 0.3s linear;
@@ -133,23 +134,23 @@ input {
   }
     
   /* Show the indicator (dot/circle) when checked */
-  .wrap-input input:checked ~ .checkmark:after {
+  /* .wrap-input input:checked ~ .checkmark:after {
     display: block;
-  }
+  } */
     
   /* Style the indicator (dot/circle) */
   .wrap-input .checkmark:after {
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
     background: gray;
   }
 
-  .wrap-input:hover input:checked ~ .checkmark {
+  /* .wrap-input:hover input:checked ~ .checkmark {
       background-color: white;
-  }
+  } */
 
 #nav1:checked ~ .nav-desc .wrap-desc .description {
     margin-top: 0;
@@ -163,7 +164,7 @@ input {
 #nav1:checked ~ .nav-desc .navigation .check-nav1 .checkmark:after {
     display: block;
 }
-#nav1:checked ~ .nav-desc .navigation .check-nav1:hover .checkmark:after{
+#nav1:checked ~ .nav-desc .navigation .check-nav1:hover .checkmark {
     background-color: white;
 }
 
@@ -181,7 +182,7 @@ input {
 #nav2:checked ~ .nav-desc .navigation .check-nav2 .checkmark:after {
     display: block;
 }
-#nav2:checked ~ .nav-desc .navigation .check-nav2:hover .checkmark:after{
+#nav2:checked ~ .nav-desc .navigation .check-nav2:hover .checkmark {
     background-color: white;
 }
 
@@ -199,7 +200,7 @@ input {
 #nav3:checked ~ .nav-desc .navigation .check-nav3 .checkmark:after {
     display: block;
 }
-#nav3:checked ~ .nav-desc .navigation .check-nav3:hover .checkmark:after{
+#nav3:checked ~ .nav-desc .navigation .check-nav3:hover .checkmark {
     background-color: white;
 }
 
@@ -217,12 +218,51 @@ input {
 #nav4:checked ~ .nav-desc .navigation .check-nav4 .checkmark:after {
     display: block;
 }
-#nav4:checked ~ .nav-desc .navigation .check-nav4:hover .checkmark:after{
+#nav4:checked ~ .nav-desc .navigation .check-nav4:hover .checkmark {
     background-color: white;
 }
 
   
+@media screen and (max-width: 768px) {
 
+    main {
+        width: 100vw;
+    }
+
+    .wrapper {
+        margin: 20px 0;
+        height: 75vw;
+        overflow: hidden;
+        border-radius: 3%;
+    }
+    
+    .slider {
+        width: 100vw;
+        /* margin-top: -30vw; */
+        /* border: 1px solid yellow; */
+        /* transition: all 0.3s ease-out; */
+    }
+    
+    .slider img {
+        /* display: block; */
+        /* margin: 0; */
+        /* padding: 0; */
+        height: 75vw;
+        
+    }
+
+    #nav2:checked ~ .wrapper .slider {
+        margin-top: -75vw;
+    }
+    #nav3:checked ~ .wrapper .slider {
+        margin-top: -150vw;
+    }
+    #nav4:checked ~ .wrapper .slider {
+        margin-top: -225vw;
+    }
+
+
+}
 
 
   
