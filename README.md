@@ -1,2 +1,2 @@
 # cssMemSlider
-cssMemSlider only css and html
+https://lapupundr.github.io/cssMemSlider/cssMemSlider/index.html
