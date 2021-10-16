@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+    background-color: gray;
+}
+
+div {
+    border: 1px solid red;
+}
+
+main {
+    width: 40vw;
+    margin: 0 auto;
+    border: 1px solid blue;
+}
+
+.nav-desc {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.wrapper {
+    margin: 20px 0;
+    height: 30vw;
+    overflow: hidden;
+    border-radius: 3%;
+}
+
+.slider {
+    width: 100vw;
+    margin-top: -30vw;
+    border: 1px solid yellow;
+    transition: all 0.3s ease-out;
+}
+
+.slider img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 30vw;
+    
+}
+
+.wrap-desc {
+    height: 3rem;
+    /* width: 70%; */
+    overflow: hidden;
+}
+
+.description {
+    width: 100%;
+    /* height: 3rem; */
+    margin-top: -3rem;
+    line-height: 1rem;
+    transition: all 0.3s ease-out;
+    /* font-size: 1rem; */
+}
+
+.description > p {
+    padding-bottom: 2rem;
+    /* margin-top: -3rem; */
+}
+
+.wrap-input {
+    display: inline-block;
+    /* position: relative; */
+    padding-left: 10px;
+    /* height: 2rem; */
+    /* width: 2rem; */
+    height: 2rem;
+    /* margin-bottom: 12px; */
+    cursor: pointer;
+    /* border: 1px solid red; */
+    /* opacity: 0.5; */
+    /* font-size: 1rem; */
+    /* line-height: 1rem; */
+    /* -webkit-user-select: none; */
+    /* -moz-user-select: none; */
+    /* -ms-user-select: none; */
+    /* user-select: none; */
+  }
+
+input {
+    opacity: 0.3;
+    cursor: pointer;
+    /* height: 0; */
+    /* width: 0; */
+}
+
+.checkmark {
+    display: block;
+    /* margin-top: -1rem; */
+    /* position: relative; */
+    /* top: 0; */
+    /* left: 0; */
+    height: 16px;
+    width: 16px;
+    background-color: #99c9e0;
+    border-radius: 50%;
+    /* box-sizing: border-box; */
+  }
+
+  
+
+  .wrap-input:hover input ~ .checkmark {
+    background-color: #fff;
+    /* border-radius: 3px solid #fff; */
+    /* box-sizing: border-box; */
+  }
+
+  /* When the radio button is checked, add a blue background */
+.wrap-input input:checked ~ .checkmark {
+    background-color: #99c9e0;
+  }
+    
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: relative;
+    display: none;
+  }
+    
+  /* Show the indicator (dot/circle) when checked */
+  .wrap-input input:checked ~ .checkmark:after {
+    display: block;
+  }
+    
+  /* Style the indicator (dot/circle) */
+  .wrap-input .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: gray;
+  }
+
+  .wrap-input:hover input:checked ~ .checkmark {
+      background-color: white;
+  }
+
+#nav1:checked ~ .nav-desc .wrap-desc .description {
+    margin-top: 0;
+}
+#nav1:checked ~ .wrapper .slider {
+    margin-top: 0;
+}
+
+
+#nav2:checked ~ .nav-desc .wrap-desc .description {
+    margin-top: -3rem;
+}
+#nav2:checked ~ .wrapper .slider {
+    margin-top: -30vw;
+}
+
+
+#nav3:checked ~ .nav-desc .wrap-desc .description {
+    margin-top: -6rem;
+}
+#nav3:checked ~ .wrapper .slider {
+    margin-top: -60vw;
+}
+
+
+#nav4:checked ~ .nav-desc .wrap-desc .description {
+    margin-top: -9rem;
+}
+#nav4:checked ~ .wrapper .slider {
+    margin-top: -90vw;
+}
+
+  
+
+
+
+  
+
