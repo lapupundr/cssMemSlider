@@ -101,23 +101,29 @@ input {
     /* left: 0; */
     height: 16px;
     width: 16px;
-    background-color: #99c9e0;
+    background-color: #009acd;
     border-radius: 50%;
+    transition: 0.3s linear;
     /* box-sizing: border-box; */
   }
 
-  
 
-  .wrap-input:hover input ~ .checkmark {
+
+.wrap-input:hover .checkmark {
     background-color: #fff;
-    /* border-radius: 3px solid #fff; */
-    /* box-sizing: border-box; */
-  }
+}
 
-  /* When the radio button is checked, add a blue background */
-.wrap-input input:checked ~ .checkmark {
-    background-color: #99c9e0;
-  }
+/* .wrap-input:hover input ~ .checkmark {
+    background-color: #fff;
+} */
+
+/* input:checked ~ .nav-desc .navigation .wrap-input .checkmark {
+    background-color: red;
+  } */
+
+/* .wrap-input input:checked ~ .checkmark {
+    background-color: #009acd;
+  } */
     
   /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -151,6 +157,16 @@ input {
 #nav1:checked ~ .wrapper .slider {
     margin-top: 0;
 }
+#nav1:checked ~ .nav-desc .navigation .check-nav1 .checkmark {
+    background-color: #009acd;
+}
+#nav1:checked ~ .nav-desc .navigation .check-nav1 .checkmark:after {
+    display: block;
+}
+#nav1:checked ~ .nav-desc .navigation .check-nav1:hover .checkmark:after{
+    background-color: white;
+}
+
 
 
 #nav2:checked ~ .nav-desc .wrap-desc .description {
@@ -159,6 +175,16 @@ input {
 #nav2:checked ~ .wrapper .slider {
     margin-top: -30vw;
 }
+#nav2:checked ~ .nav-desc .navigation .check-nav2 .checkmark {
+    background-color: #009acd;
+}
+#nav2:checked ~ .nav-desc .navigation .check-nav2 .checkmark:after {
+    display: block;
+}
+#nav2:checked ~ .nav-desc .navigation .check-nav2:hover .checkmark:after{
+    background-color: white;
+}
+
 
 
 #nav3:checked ~ .nav-desc .wrap-desc .description {
@@ -167,6 +193,16 @@ input {
 #nav3:checked ~ .wrapper .slider {
     margin-top: -60vw;
 }
+#nav3:checked ~ .nav-desc .navigation .check-nav3 .checkmark {
+    background-color: #009acd;
+}
+#nav3:checked ~ .nav-desc .navigation .check-nav3 .checkmark:after {
+    display: block;
+}
+#nav3:checked ~ .nav-desc .navigation .check-nav3:hover .checkmark:after{
+    background-color: white;
+}
+
 
 
 #nav4:checked ~ .nav-desc .wrap-desc .description {
@@ -174,6 +210,15 @@ input {
 }
 #nav4:checked ~ .wrapper .slider {
     margin-top: -90vw;
+}
+#nav4:checked ~ .nav-desc .navigation .check-nav4 .checkmark {
+    background-color: #009acd;
+}
+#nav4:checked ~ .nav-desc .navigation .check-nav4 .checkmark:after {
+    display: block;
+}
+#nav4:checked ~ .nav-desc .navigation .check-nav4:hover .checkmark:after{
+    background-color: white;
 }
 
   
