@@ -36,7 +36,7 @@ main {
 
 .slider {
     width: 100%;
-    transition: all 0.3s ease-out;
+    transition: all 0.7s ease-out;
 }
 
 .slider img {
@@ -55,7 +55,8 @@ main {
     width: 100%;
     margin-top: -3rem;
     line-height: 1rem;
-    transition: all 0.3s ease-out;
+    transition: all 0.7s ease-out;
+    overflow: hidden;
 }
 
 .description > p {
@@ -82,7 +83,7 @@ input {
     width: 1rem;
     background-color: #009acd;
     border-radius: 50%;
-    transition: all 0.5s ease-out;
+    transition: all 0.7s ease-out;
 }
 
 
@@ -107,7 +108,32 @@ input {
     height: 0.5rem;
     border-radius: 50%;
     background: gray;
-  }
+}
+
+@keyframes anim-slider {
+    0% { filter: grayscale(0);}
+    20% { filter: grayscale(1);}
+    70% { filter: grayscale(0.9);}
+    100% { filter: grayscale(0);}
+}
+
+input:focus ~ .wrapper .slider img{
+    animation: anim-slider 0.5s ease-in-out;
+}
+
+@keyframes anim-text {
+    0% { transform: translateY(0px);}
+    20% { transform: translateY(+20px);}
+    40% { transform: translateY(0px);}
+    60% { transform: translateY(+10px);}
+    80% { transform: translateY(0px);}
+    100% { transform: translateY(5px);}
+
+}
+
+input:focus ~ .nav-desc .wrap-desc .description {
+    animation: anim-text 0.5s linear 0.5s;
+}
 
 
 
